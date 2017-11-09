@@ -1,7 +1,8 @@
 ---
 ## RubyistがScalaを学んでみて
 
-- 0x64物語reboot 0x08夜 静的型付き言語
+- 0x64物語 Reboot 0x08夜
+- 静的型付き言語
 - by iwtn
 
 
