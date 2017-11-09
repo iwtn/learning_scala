@@ -83,6 +83,28 @@ add: (Int, Int) => Int = <function2>
 > foldLeftを用いて、Listの要素を反転させる次のシグニチャを持ったメソッドreverseを実装してみましょう：
 
 ---
+### foldLeftとは
+
+- Listを左からの畳み込むもの
+
+```scala
+def foldLeft[B](z: B)(f: (B, A) ⇒ B): B
+```
+
+---
+```
+List(1, 2, 3).foldLeft(0)((x, y) => x + y)
+
+       +
+      / \
+     +   3
+    / \
+   +   2
+  / \
+ 0   1
+```
+
+---
 ```scala
 scala> def reverse[T](list: List[T]): List[T] =
      | list.foldLeft(Nil)((a, b) => b :: a)
