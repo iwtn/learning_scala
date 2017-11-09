@@ -76,6 +76,29 @@ add: (Int, Int) => Int = <function2>
 ```
 
 ---
+## 辛かったところ
+
+### 練習問題
+
+> foldLeftを用いて、Listの要素を反転させる次のシグニチャを持ったメソッドreverseを実装してみましょう：
+
+---
+```scala
+scala> def reverse[T](list: List[T]): List[T] = list.foldLeft(Nil)((a, b) => b :: a)
+
+<console>:11: error: type mismatch;
+ found   : List[T]
+ required: scala.collection.immutable.Nil.type
+       def reverse[T](list: List[T]): List[T] = list.foldLeft(Nil)((a, b) => b :: a)
+```
+
+---
+```scala
+scala> def reverse[T](list: List[T]): List[T] = list.foldLeft(Nil: List[T])((a, b) => b :: a)
+reverse: [T](list: List[T])List[T]
+```
+
+---
 ## Scalaどうよ？
 
 - 「静的型付き言語」というよりは「型のある関数型言語」
